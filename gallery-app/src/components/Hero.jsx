@@ -21,7 +21,7 @@ const Footer = () => {
           <span style={{ fontFamily: "Biheastra", fontSize: "105px" }}>
             Art Galleria.
           </span>
-          <span style={{fontStyle: "italic"}}>
+          <span style={{ fontStyle: "italic" }}>
             Explore the World of Renowned Artists and their Iconic Creations
           </span>
         </div>
@@ -73,7 +73,7 @@ const Footer = () => {
             <img
               src={humanModel}
               alt="humanModel"
-              style={{ width: "50%", height: "auto" }}
+              style={{ width: "90%", height: "auto" }}
             />
           </div>
         </div>
@@ -156,42 +156,43 @@ const Hero = () => {
             <div className="modal" onClick={closeModal}>
               <div
                 className="modal-content"
-                style={{ display: "flex", gap: "20px" }}
+                style={{ gap: "20px" }}
               >
-                <img
-                  src={artworks[selectedImage].image}
-                  alt={`Artwork-${selectedImage}`}
-                />
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "30px",
-                  }}
-                >
-                  <h1>{artworks[selectedImage].name}</h1>
-                  <h2>{artworks[selectedImage].artist}</h2>
-                  <h3>{artworks[selectedImage].date}</h3>
-                  <p>{artworks[selectedImage].description}</p>
-                  <a
-                    href={artworks[selectedImage].url}
-                    style={{
-                      textDecoration: "none",
-                      color: "whitesmoke",
-                      fontStyle: "italic",
-                    }}
-                    target="_blank"
-                  >
-                    More about the artwork →
-                  </a>
-                </div>
-                <span
-                  className="close"
-                  onClick={closeModal}
-                  style={{ marginLeft: "auto" }}
-                >
-                  &times;
-                </span>
+                    <img
+                      src={artworks[selectedImage].image}
+                      alt={`Artwork-${selectedImage}`}
+                    />
+                    <div
+                    id="modal-items"
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "30px",
+                      }}
+                    >
+                      <h1>{artworks[selectedImage].name}</h1>
+                      <h2>{artworks[selectedImage].artist}</h2>
+                      <h3>{artworks[selectedImage].date}</h3>
+                      <p>{artworks[selectedImage].description}</p>
+                      <a
+                        href={artworks[selectedImage].url}
+                        style={{
+                          textDecoration: "none",
+                          color: "whitesmoke",
+                          fontStyle: "italic",
+                        }}
+                        target="_blank"
+                      >
+                        More about the artwork →
+                      </a>
+                    </div>
+                    <span
+                      className="close"
+                      onClick={closeModal}
+                      style={{ marginLeft: "auto" }}
+                    >
+                      &times;
+                    </span>
               </div>
             </div>
           )}
